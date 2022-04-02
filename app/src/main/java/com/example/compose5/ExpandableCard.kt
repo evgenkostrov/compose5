@@ -72,9 +72,9 @@ fun ExpandableCard() {
             }
 if (expandedState){
     Text(
-        text = "jjjj" +
-                "jkjjj" +
-                "lkkjkj"
+        text = "111111" +
+                "22222" +
+                "33333"
     )
 }
         }
