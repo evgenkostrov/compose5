@@ -30,55 +30,82 @@ import com.example.compose5.ui.theme.Shapes
 fun ExpandableCard() {
     var expandedState by remember { mutableStateOf(false) }
     val rotatedState by animateFloatAsState(targetValue = if (expandedState) 180f else 0f)
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .animateContentSize(
-                animationSpec = tween(
-                    durationMillis = 500,
-                    easing = LinearOutSlowInEasing
+    Column {
+        TopAppBar(
+            title = {
+                Text(
+                    text = "Profile",
+                    fontSize = MaterialTheme.typography.h6.fontSize,
                 )
-            ),
-        shape = Shapes.medium,
-        onClick = {
-            expandedState = !expandedState
-        }
-    ) {
-        Column(
+            },
+            backgroundColor = MaterialTheme.colors.surface,
+        )
+
+
+
+        Card(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(12.dp)
+                .animateContentSize(
+                    animationSpec = tween(
+                        durationMillis = 500,
+                        easing = LinearOutSlowInEasing
+                    )
+                ),
+            shape = Shapes.medium,
+            onClick = {
+                expandedState = !expandedState
+            }
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    modifier = Modifier.weight(6f),
-                    text = "MMM",
-                    fontSize = MaterialTheme.typography.h6.fontSize,
-                    fontWeight = FontWeight.Bold,
-                )
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(12.dp)
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        modifier = Modifier.weight(6f),
+                        text = "Order #1234",
+                        fontSize = MaterialTheme.typography.h6.fontSize,
+                        fontWeight = FontWeight.Bold,
+                    )
+                    Text(
+                        modifier = Modifier.weight(1f),
+                        text = "300$",
+                        fontSize = MaterialTheme.typography.h6.fontSize,
+                        fontWeight = FontWeight.Bold,
+                    )
+                }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        modifier = Modifier.weight(6f),
+                        text = "Status Paid",
+                        fontSize = MaterialTheme.typography.h6.fontSize,
+                        fontWeight = FontWeight.Bold,
+                    )
+                    IconButton(
+                        modifier = Modifier
+                            .alpha(ContentAlpha.medium)
+                            .weight(1f)
+                            .rotate(rotatedState),
+                        onClick = { expandedState = !expandedState }) {
+                        Icon(
+                            imageVector = Icons.Default.ArrowDropDown,
+                            contentDescription = "Drop-Down"
+                        )
+                    }
+                }
+                if (expandedState) {
+                    Text(
+                        text = "111111" +
+                                "22222" +
+                                "33333",
+                        maxLines = 3
 
-
-                IconButton(
-                    modifier = Modifier
-                        .alpha(ContentAlpha.medium)
-                        .weight(1f)
-                        .rotate(rotatedState),
-                    onClick = { expandedState = !expandedState }) {
-                    Icon(
-                        imageVector = Icons.Default.ArrowDropDown,
-                        contentDescription = "Drop-Down"
                     )
                 }
             }
-if (expandedState){
-    Text(
-        text = "111111" +
-                "22222" +
-                "33333"
-    )
-}
         }
-
     }
 }
 
