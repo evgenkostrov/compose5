@@ -1,35 +1,44 @@
-package com.example.compose5.ui.theme
+package com.narcissus.marketplace.ui.user.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import com.narcissus.marketplace.ui.user.theme.DefaultTheme
 
 private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = Primary,
+    secondary = Purple200,
+    background = Black,
+    surface = Black,
+    error = Red,
+    onPrimary = White,
+    onSecondary = DarkPrimary,
+    onSurface = White,
+    onBackground = White,
+    onError = White,
+    secondaryVariant = White
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    primary = Primary,
+    secondary = Purple200,
+    background = White,
+    surface = White,
+    error = Red,
+    onPrimary = Black,
+    onSecondary = GreyLight,
+    onSurface = Black,
+    onBackground = Black,
+    onError = Black,
+    secondaryVariant = Grey
 )
 
 @Composable
-fun Compose5Theme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+fun DefaultTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+) {
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {
