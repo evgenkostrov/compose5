@@ -1,18 +1,8 @@
 package com.example.compose5.composables
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -26,14 +16,10 @@ import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
-import com.narcissus.marketplace.ui.user.theme.DarkTheme
-import com.narcissus.marketplace.ui.user.theme.DefaultPadding
+import com.example.compose5.ui.theme.*
 import com.narcissus.marketplace.ui.user.theme.GradientBackgroundEnd
 import com.narcissus.marketplace.ui.user.theme.GradientBackgroundStart
-import com.narcissus.marketplace.ui.user.theme.LightTheme
-import com.example.compose5.ui.theme.Montserrat
 import com.narcissus.marketplace.ui.user.theme.White
-import com.narcissus.marketplace.ui.user.theme.regular
 
 private const val YOU_ARE_NOT_LOGGED_IN_ASSET = "you_are_not_logged_in_3d.json"
 

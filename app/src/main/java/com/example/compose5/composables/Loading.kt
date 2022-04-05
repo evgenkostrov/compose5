@@ -7,8 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.narcissus.marketplace.ui.user.theme.DarkTheme
-import com.narcissus.marketplace.ui.user.theme.LightTheme
+import com.example.compose5.ui.theme.DarkTheme
+import com.example.compose5.ui.theme.LightTheme
 
 @Composable
 fun Loading() {

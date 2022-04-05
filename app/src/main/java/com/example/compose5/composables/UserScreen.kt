@@ -1,29 +1,14 @@
 package com.example.compose5.composables
 
 import androidx.annotation.DrawableRes
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.*
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Switch
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -35,21 +20,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.narcissus.marketplace.core.R
-import com.narcissus.marketplace.domain.model.UserProfile
+import com.example.compose5.R
+import com.example.compose5.UserProfile
+import com.example.compose5.ui.theme.*
 import com.narcissus.marketplace.ui.user.UserViewModel
-import com.narcissus.marketplace.ui.user.theme.DarkTheme
-import com.narcissus.marketplace.ui.user.theme.DefaultPadding
-import com.narcissus.marketplace.ui.user.theme.DefaultTheme
-import com.narcissus.marketplace.ui.user.theme.HalfPadding
-import com.narcissus.marketplace.ui.user.theme.HeaderHeight
-import com.narcissus.marketplace.ui.user.theme.IconSize
-import com.narcissus.marketplace.ui.user.theme.IntermediatePadding
-import com.narcissus.marketplace.ui.user.theme.ItemHeight
-import com.narcissus.marketplace.ui.user.theme.LightTheme
-import com.example.compose5.ui.theme.Montserrat
-import com.narcissus.marketplace.ui.user.theme.SmallPadding
-import com.narcissus.marketplace.ui.user.theme.regular
 
 @Composable
 fun UserScreen(
